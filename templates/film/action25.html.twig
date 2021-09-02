@@ -1,0 +1,26 @@
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+Nombre des resultats:{{ films|length}} <br><br>
+{#{{ films }}#}
+
+<table border="1">
+    <caption> <h1>Resulta de la Recherche:</h1> </caption>
+   <tr>
+       <th>Titre</th>
+       <th>Duree</th>
+       <th>Date_Sortie</th>
+       <th>Note</th>
+       <th>Age_Minimal</th>
+   </tr>
+   {% for film in films %}
+   <tr>
+       <td>{{ film['titre'] }} </td>
+       <td>{{ film['duree'] }}</td>
+       <td>{{ film['date_sortie'] }}</td>
+       <td>{{ film['note'] }}</td>
+       <td>{{ film['age_minimal'] }}</td>
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    

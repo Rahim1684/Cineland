@@ -1,0 +1,13 @@
+{% block titre %}
+	<title>Films</title>
+	
+{% endblock %}
+{% block corps %}
+	{{ form(form) }}
+{% endblock %}
+{% block pied %}
+
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a> | 
+	<a href="{{ path('cineland_menu') }}">Menu des actions</a>
+	
+{% endblock %}

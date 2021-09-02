@@ -1,0 +1,43 @@
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+{#{{ films }}#}
+<table border="1">
+   <caption>les détails de l'acteur selectionné</caption>
+   <tr>
+       <th>Nom_Prenom</th>
+       <th>Date de Naissance</th>
+       <th>Nationalité</th>       
+   </tr>
+   {% for acteur in Acteurs %}
+   <tr>
+       <td>{{ acteur['nom_prenom'] }} </td>
+       <td>{{ acteur['date_naissance'] }}</td>
+       <td>{{ acteur['nationalite'] }}</td>       
+   </tr>
+   {% endfor %}
+   
+   Nombre des resultats:{{ films|length}} <br><br>
+</table>
+
+   <br> <br>
+<table border="1">
+    <h1>les films dans lesquels il a joué:</h1>
+   <tr>
+       <th>Titre</th>
+       <th>Duree</th>
+       <th>Date_Sortie</th>
+       <th>Note</th>
+       <th>Age_Minimal</th>
+   </tr>
+   {% for film in films %}
+   <tr>
+       <td>{{ film['titre'] }} </td>
+       <td>{{ film['duree'] }}</td>
+       <td>{{ film['date_sortie'] }}</td>
+       <td>{{ film['note'] }}</td>
+       <td>{{ film['age_minimal'] }}</td>
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    

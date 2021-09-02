@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div name="navigation">
+            <a href="{{ path('cineland_accueil') }}">Accueil</a>
+            <a href="{{ path('cineland_menu') }}">Menu</a>                
+            <a href="{{ path('cineland_plus') }}">Plus...</a>                
+        </div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

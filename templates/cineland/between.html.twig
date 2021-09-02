@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block titre %}
+	<title>Films</title>
+	Films contenu entre le {{ min|date('d/m/Y') }} et le {{ max|date('d/m/Y') }}
+{% endblock %}
+
+{% block corps %}
+	{{ result }}
+{% endblock %}
+{% block pied %}
+
+	<a href="{{ path('cineland_menu') }}">Retour à l'accueil</a> | 
+
+	
+{% endblock %}

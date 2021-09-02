@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		 <meta charset="UTF-8">
+        <title>{% block title %}Plus d'actions{% endblock %}</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        {% block stylesheets %}{% endblock %}
+        <a href="{{ path('cineland_menu') }}">Main_Menu</a>        
+		</head>
+		<body>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <div id="navigation" >
+
+	<ul class="nav nav-tabs">
+
+		  <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Acteur</a>
+		    <div class="dropdown-menu">
+		      <a class="dropdown-item"  href="{{ path('acteur_index') }}">Action 3 : lister tous les acteurs</a>
+			  <a class="dropdown-item"  href="{{ path('cineland_acteur_action4F') }}">Action 4 : Afficher les détails d’un acteur donné </a>
+		      <a class="dropdown-item"  href="{{ path('acteur_new') }}">Action 5 : ajouter un acteur</a>
+		      <a class="dropdown-item"  href="{{ path('acteur_index') }}">Action 6 : modifier un acteur</a>
+		      <a class="dropdown-item"  href="{{ path('acteur_index') }}">Action 7 : supprimer un acteur</a>
+			  <a class="dropdown-item" href="{{ path('film_findActor') }}">Action 15 : lister les acteurs ayant joué dans un film donné</a>
+		      <a class="dropdown-item" href="{{ path('cineland_acteur_action16') }}">Action 16 : lister les acteurs ayant joué dans au moins 3 films différents</a>
+		      <a class="dropdown-item" href="{{ path('cineland_acteur_action21') }}">Action 21: Afficher pour chaque acteur la liste des genres dans lesquels il a joué au moins un film</a>
+		
+		    </div>
+		  </li>
+		  <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Film</a>
+		    <div class="dropdown-menu">
+		<a class="dropdown-item" href="{{ path('film_index') }}">Action 8 : lister tous les films</a>
+		<a class="dropdown-item" href="{{ path('cineland_film_action9F') }}">Action 9 : Afficher les détails d’un film </a>
+		<a class="dropdown-item" href="{{ path('film_new') }}">Action 10: ajouter un film</a>
+		<a class="dropdown-item" href="{{ path('film_index') }}">Action 11 : modifier un film</a>
+		<a class="dropdown-item" href="{{ path('film_index') }}">Action 12 : supprimer un film</a>
+		<a class="dropdown-item" href="{{ path('film_findBetweenDate') }}">Action 13 : lister les films dont la date de sortie est comprise entre deux années données</a>
+		<a class="dropdown-item" href="{{ path('film_findInfDate') }}">Action 14 : lister les films dont la date de sortie est antérieure à une certaine date précise donnée</a>
+		<a class="dropdown-item" href="{{ path('film_findFilmByActor') }}">Action 17 : lister tous les films dans lesquels 2 acteurs donnés ont joué ensemble</a>
+		<a class="dropdown-item" href="{{ path('film_dureeByActeur') }}">Action 19: Afficher la durée en minutes de tous les films joués par un acteur donné</a>
+		<a class="dropdown-item" href="{{ path('cineland_film_action20') }}">Action 20: Afficher pour chaque acteur la liste des films dans lesquels il a joué dans l’ordre chronologique</a>
+		<a class="dropdown-item" href="{{ path('film_AvgDuree') }}">Action 22: Afficher la durée moyenne de tous les films d’un genre donné </a>
+		<a class="dropdown-item" href="{{ path('film_indexer') }}">action 23: Augmenter ou diminuer la note d’un film</a>
+		 <a class="dropdown-item" href="{{ path('film_filmByMot') }}">Action 25 : Rechercher un film via une partie de titre</a>
+		<a class="dropdown-item" href="{{ path('film_AgeminUp') }}">Action 26: Augmenter l’âge minimal de tous les films dans lesquels à jouer un acteur donné (1 par défaut) </a>
+		    </div>
+		  </li>
+		  <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genre</a>
+		    <div class="dropdown-menu">
+		     <a class="dropdown-item" href="{{ path('genre_index') }}">Action 1: lister tous les genres</a>
+		     <a  class="dropdown-item" href="{{ path('genre_new') }}">Action 2: ajouter un genre</a>
+			 <a  class="dropdown-item" href="{{ path('Cineland_genre_action18F') }}">Action 18: lister les genres pour lesquels un acteur donné a joué au moins 2 films </a>
+		     <a  class="dropdown-item" href="{{ path('genre_index') }}">Action 24 : Supprimer un genre seulement si aucun film ne s’y rapporte</a>
+		    </div>
+		  </li>
+		  
+ 
+       
+	</div>
+				{% block corps %}
+                                    <h2>CI-HAUT TOUTES LES ACTIONS DU SITE</h2>
+				{% endblock %}
+		
+			<div id="pied" >
+				{% block pied %}
+				{% endblock %}
+			</div>
+		</body>
+</html>

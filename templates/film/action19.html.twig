@@ -1,0 +1,22 @@
+{# empty Twig template #}
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+Nombre des resultats:{{ films|length }} <br><br>
+{#{{ films }}#}
+
+<table border="1">
+   <caption>la durée en minutes de tous les films joués par un acteur donné </caption>
+   <tr>
+       <th>Titre</th>
+       <th>Duree</th>       
+   </tr>
+   {% for film in films %}
+   <tr>
+       <td>{{ film['titre'] }} </td>
+       <td>{{ film['duree'] }}</td>       
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    
+

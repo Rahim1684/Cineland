@@ -1,0 +1,21 @@
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+Nombre des resultats:{{ Acteurs|length}} <br><br>
+{#{{ films }}#}
+
+<table border="1">
+    <caption>Pour chaque acteur la liste des genres dans lesquels il a joué au moins un film</caption>
+   <tr>       
+       <th>Nom_Prenom</th>       
+       <th>Genre</th>       
+   </tr>
+   {% for acteur in Acteurs %}
+   <tr>
+       <td>{{ acteur['nom_prenom'] }} </td>
+       <td>{{ acteur['nom'] }}</td>       
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    
+

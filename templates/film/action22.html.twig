@@ -1,0 +1,19 @@
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+Nombre des resultats:{{ films|length}} <br><br>
+{#{{ films }}#}
+
+<table border="1">
+    <caption>la durée moyenne de tous les films du genre <h1>{{ nom }}</h1> </caption>
+   <tr>
+       <th>Durée moyenne</th>       
+   </tr>
+   {% for film in films %}
+   <tr>
+       <td>{{ film['AVG(duree)'] }} </td>
+       
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    

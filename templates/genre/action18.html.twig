@@ -1,0 +1,20 @@
+<a href="{{ path('cineland_menu') }}">Main_Menu</a> <br><br>       
+Nombre des resultats:{{ Genres|length}} <br><br>
+{#{{ films }}#}
+
+<table border="1">
+   Les genres pour lesquels l'acteur donné a joué au moins 2 films
+   <tr>
+       <th>Gerenre</th>
+       
+   </tr>
+   {% for genre in Genres %}
+   <tr>
+       <td>{{ genre['nom'] }} </td>       
+   </tr>
+   {% endfor %}
+   
+</table>
+    
+    
+

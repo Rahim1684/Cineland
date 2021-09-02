@@ -1,3 +1,149 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+cineland:
+    path: /
+    controller: App\Controller\CinelandController::index
+    
+cineland_accueil:
+    path: /cineland/accueil
+    controller: App\Controller\CinelandController::index
+    
+cineland_menu:
+    path: /cineland/menu
+    controller: App\Controller\CinelandController::menu    
+
+cineland_plus:
+    path: /cineland/plus
+    controller: App\Controller\CinelandController::plus    
+    
+    
+cineland_acteur:
+    path: /acteur
+    controller: App\Controller\ActeurController::show
+    
+cineland_film:
+    path: /film
+    controller: App\Controller\FilmController::show
+        
+cineland_film_action13:
+    path: /film/action13/{dateMin}|{dateMax}
+    controller: App\Controller\FilmController::action13
+    
+cineland_film_action14:
+    path: /film/action14/{dateMax}
+    controller: App\Controller\FilmController::action14    
+    
+cineland_film_action17:
+    path: /film/action17/{act1}|{act2}
+    controller: App\Controller\FilmController::action17    
+    
+cineland_film_action19:
+    path: /film/action19/{act1}
+    controller: App\Controller\FilmController::action19        
+    
+cineland_film_action20:
+    path: /film/film/action20
+    controller: App\Controller\FilmController::action20            
+    
+cineland_film_action22:
+    path: /film/film/action22/{genre}|{nom}
+    controller: App\Controller\FilmController::action22                
+    
+cineland_film_action23:
+    path: /film/film/action23/{film}|{noteP}|{note}|{code}
+    controller: App\Controller\FilmController::action23                    
+    
+cineland_film_action25:
+    path: /film/film/action25/{titre}
+    controller: App\Controller\FilmController::action25                
+    
+cineland_genre:
+    path: /genre
+    controller: App\Controller\GenreController::show    
+    
+cineland_film_action26:
+    path: /film/action26/{act}|{valP}|{val}
+    controller: App\Controller\FilmController::action26
+    
+film_findActor:
+    path: /action15F
+    controller: App\Controller\CinelandController::action15F
+
+acteur_filmSupTrois:
+    path: /action16
+    controller: App\Controller\CinelandController::action16
+
+genre_genrebyactor:
+    path: /action21
+    controller: App\Controller\CinelandController::action21
+
+film_findBetweenDate:
+    path: /action13F
+    controller: App\Controller\CinelandController::action13F
+
+film_findInfDate:
+    path: /action14F
+    controller: App\Controller\CinelandController::action14F
+    
+film_findFilmByActor:
+    path: /action17F
+    controller: App\Controller\CinelandController::action17F
+    
+film_dureeByActeur:
+    path: /action19F
+    controller: App\Controller\CinelandController::action19F
+    
+acteur_listfilm:
+    path: /action19
+    controller: App\Controller\CinelandController::action19
+    
+film_AvgDuree:
+    path: /action22F
+    controller: App\Controller\CinelandController::action22F
+        
+film_indexer:
+    path: /action23F
+    controller: App\Controller\CinelandController::action23F
+    
+film_filmByMot:
+    path: /action25F
+    controller: App\Controller\CinelandController::action25F
+    
+film_AgeminUp:
+    path: /action26F
+    controller: App\Controller\CinelandController::Ageminplus
+
+cineland_acteur_action4:
+    path: /acteur/action4/{act}
+    controller: App\Controller\ActeurController::action4
+    
+cineland_acteur_action4F:
+    path: /acteur/acteur/action4F
+    controller: App\Controller\CinelandController::action4F
+    
+cineland_film_action9:
+    path: /film/film/action9/{film}
+    controller: App\Controller\FilmController::action9
+    
+cineland_film_action9F:
+    path: /cineland/action9F
+    controller: App\Controller\CinelandController::action9F    
+    
+cineland_acteur_action15:
+    path: /acteur/action15/{film}
+    controller: App\Controller\ActeurController::action15
+    
+cineland_acteur_action16:
+    path: /acteur/acteur/action16
+    controller: App\Controller\ActeurController::action16
+
+cineland_acteur_action21:
+    path: /acteur/acteur/action21
+    controller: App\Controller\ActeurController::action21
+    
+Cineland_genre_action18F:
+    path: /genre/genre/action18F
+    controller: App\Controller\CinelandController::action18F
+    
+cineland_genre_action18:
+    path: /genre/genre/action18/{act}
+    controller: App\Controller\GenreController::action18
+    

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acteur index{% endblock %}
+
+{% block body %}
+    <a href="{{ path('acteur_new') }}">Ajouter</a>
+    <h1>Acteur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NomPrenom</th>
+                <th>DateNaissance</th>
+                <th>Nationalite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acteur in acteurs %}
+            <tr>
+                <td>{{ acteur.id }}</td>
+                <td>{{ acteur.nomPrenom }}</td>
+                <td>{{ acteur.dateNaissance ? acteur.dateNaissance|date('Y-m-d') : '' }}</td>
+                <td>{{ acteur.nationalite }}</td>
+                <td>
+                    <a href="{{ path('acteur_show', {'id': acteur.id}) }}">Détails</a>
+                    <a href="{{ path('acteur_edit', {'id': acteur.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}
